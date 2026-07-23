@@ -24,10 +24,12 @@
   },
   "history": {
     "title": "Scan History",
-    "scannedToday": "Scanned Today"
+    "scannedToday": "Scanned Today",
+    "no_data": "No scanned medicines"
   },
   "favorites": {
-    "title": "Favorites"
+    "title": "Favorites",
+    "no_data": "No favorite medicines"
   },
   "settings": {
     "title": "Settings",
@@ -63,6 +65,7 @@
     "warnings": "Warnings",
     "precautions": "Precautions",
     "storage": "Storage",
-    "storageInstructions": "Storage instructions"
+    "storageInstructions": "Storage instructions",
+    "added_to_favorites": "Added to favourites ❤️"
   }
 }

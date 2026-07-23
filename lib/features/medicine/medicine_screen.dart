@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MedicineScreen extends StatelessWidget {
   const MedicineScreen({super.key});
@@ -7,7 +8,7 @@ class MedicineScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Medicine Details"),
+        title: Text('medicine.detailsTitle'.tr()),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
@@ -24,9 +25,9 @@ class MedicineScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            const Text(
-              "Paracetamol 650 mg",
-              style: TextStyle(
+            Text(
+              'medicine.sampleName'.tr(),
+              style: const TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
@@ -35,28 +36,28 @@ class MedicineScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             buildSection(
-              "Uses",
-              "Used to reduce fever and relieve mild to moderate pain.",
+              'medicine.uses'.tr(),
+              'medicine.usesContent'.tr(),
             ),
 
             buildSection(
-              "General Dosage",
-              "Usually taken 1 tablet every 4–6 hours. Do not exceed the recommended daily dose.",
+              'medicine.generalDosage'.tr(),
+              'medicine.generalDosageContent'.tr(),
             ),
 
             buildSection(
-              "Common Side Effects",
-              "Nausea, stomach upset, allergic reaction (rare).",
+              'medicine.commonSideEffects'.tr(),
+              'medicine.commonSideEffectsContent'.tr(),
             ),
 
             buildSection(
-              "Warnings",
-              "Avoid overdose. Consult a doctor if symptoms persist.",
+              'medicine.warnings'.tr(),
+              'medicine.warningsContent'.tr(),
             ),
 
             buildSection(
-              "Storage",
-              "Store in a cool, dry place away from direct sunlight.",
+              'medicine.storage'.tr(),
+              'medicine.storageContent'.tr(),
             ),
 
             const SizedBox(height: 30),
@@ -66,7 +67,7 @@ class MedicineScreen extends StatelessWidget {
               child: ElevatedButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.favorite_border),
-                label: const Text("Add to Favorites"),
+                label: Text('medicine.addToFavorites'.tr()),
               ),
             ),
           ],

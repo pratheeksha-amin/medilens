@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:medilens/features/scan/scan_screen.dart';
 import 'package:medilens/features/history/history_screen.dart';
 import 'package:medilens/features/favorites/favorites_screen.dart';
+import 'package:medilens/features/settings/settings_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -48,7 +51,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("MediLens"),
+        title: Text('home.title'.tr()),
         centerTitle: true,
       ),
       body: Padding(
@@ -57,9 +60,9 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
 
-            const Text(
-              "Scan. Understand. Stay Informed.",
-              style: TextStyle(
+            Text(
+              'home.subtitle'.tr(),
+              style: const TextStyle(
                 fontSize: 18,
                 color: Colors.grey,
               ),
@@ -80,9 +83,9 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 icon: const Icon(Icons.camera_alt),
-                label: const Text(
-                  "Scan Medicine",
-                  style: TextStyle(fontSize: 18),
+                label: Text(
+                  'home.scanButton'.tr(),
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
             ),
@@ -97,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   buildMenuCard(
                     icon: Icons.history,
-                    title: "History",
+                    title: 'home.history'.tr(),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -109,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   buildMenuCard(
                     icon: Icons.favorite,
-                    title: "Favorites",
+                    title: 'home.favorites'.tr(),
                     color: Colors.red,
                     onTap: () {
                       Navigator.push(
@@ -122,15 +125,22 @@ class HomeScreen extends StatelessWidget {
                   ),
                   buildMenuCard(
                     icon: Icons.search,
-                    title: "Search",
+                    title: 'home.search'.tr(),
                     color: Colors.green,
                     onTap: () {},
                   ),
                   buildMenuCard(
                     icon: Icons.settings,
-                    title: "Settings",
+                    title: 'home.settings'.tr(),
                     color: Colors.orange,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const SettingsScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

@@ -10,11 +10,15 @@ void main() async {
     EasyLocalization(
       supportedLocales: const [
         Locale('en'),
-        Locale('kn'),
         Locale('hi'),
+        Locale('kn'),
+        Locale('ta'),
+        Locale('te'),
+        Locale('ml'),
       ],
-      path: 'assets/translations', // <-- JSON files path
-      fallbackLocale: const Locale('en'),
+      path: 'assets/translations', // JSON translation files
+      fallbackLocale: const Locale('en'), // Default language: English
+      saveLocale: true, // Persist user's chosen language across restarts
       child: const MyApp(),
     ),
   );

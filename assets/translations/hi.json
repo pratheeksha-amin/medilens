@@ -24,10 +24,12 @@
   },
   "history": {
     "title": "स्कैन इतिहास",
-    "scannedToday": "आज स्कैन किया गया"
+    "scannedToday": "आज स्कैन किया गया",
+    "no_data": "कोई स्कैन की गई दवा नहीं"
   },
   "favorites": {
-    "title": "पसंदीदा"
+    "title": "पसंदीदा",
+    "no_data": "कोई पसंदीदा दवा नहीं"
   },
   "settings": {
     "title": "सेटिंग्स",
@@ -63,6 +65,7 @@
     "warnings": "चेतावनी",
     "precautions": "सावधानियाँ",
     "storage": "भंडारण",
-    "storageInstructions": "भंडारण निर्देश"
+    "storageInstructions": "भंडारण निर्देश",
+    "added_to_favorites": "पसंदीदा में जोड़ा गया ❤️"
   }
 }
